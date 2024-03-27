@@ -26,6 +26,19 @@ body {
   color: var(--color-text);
 }
 
+header,
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: var(--spacing);
+  text-align: center;
+  width: 100%;
+}
+header a,
+footer a {
+  color: var(--color-text);
+}
+
 label {
   display: block;
 }
