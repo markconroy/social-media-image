@@ -39,6 +39,10 @@ footer a {
   color: var(--color-text);
 }
 
+h2 {
+  color: black;
+}
+
 label {
   display: block;
 }
