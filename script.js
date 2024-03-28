@@ -5,6 +5,7 @@ const backgroundColorInput = document.querySelector('.input-background-color');
 const rememberBackgroundCheckbox = document.querySelector('.input-remember-color');
 const topText = document.querySelector('.text-top');
 const bottomText = document.querySelector('.text-bottom');
+const imageAltText = document.querySelector('.image-alt p');
 const createButton = document.querySelector('.create-image-button');
 const imageContainer = document.querySelector('#image');
 
@@ -47,7 +48,6 @@ backgroundColorInput.addEventListener('input', () => {
   } else {
     document.documentElement.style.setProperty('--color-text', '#fff');
   }
-
 });
 
 createButton.addEventListener('click', () => {
@@ -67,6 +67,9 @@ createButton.addEventListener('click', () => {
     // Update the localStorage with the new color values
     localStorage.setItem('SocialMediaImage', JSON.stringify(SocialMediaImage));
   }
+
+  // Set the alt text of the image to the top and bottom text.
+  imageAltText.textContent = `${topTextInput.value} ${bottomTextInput.value}`;
 
   html2canvas(document.querySelector("#container")).then(canvas => {
     const base64image = canvas.toDataURL("image/png");
