@@ -53,7 +53,8 @@ img {
 }
 
 #image {
-  max-width: 800px;
+  max-width: 960px;
+  width: 100%;
 }
 
 .image-alt {
@@ -68,7 +69,8 @@ img {
   background-image: radial-gradient(circle, var(--color-primary), var(--color-primary-dark));
   background-size: 200% 200%;
   background-position: 200% 100%;
-  width: 800px;
+  max-width: 960px;
+  width: 100%;
   aspect-ratio: 4 / 3;
   color: var(--color-text);
 }
@@ -93,7 +95,7 @@ img {
   grid-template-columns: repeat(2, 1fr);
   flex-wrap: wrap;
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
   gap: calc(var(--spacing) * 2);
   border: 1px solid var(--color-primary);
   padding: var(--spacing);
